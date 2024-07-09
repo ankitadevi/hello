@@ -1,13 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:wght@700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    scroll-behavior: smooth;
+    font-family: "Crimson Text", serif;
 }
 
 body {
-    color: #ededed;
-    background-color: rgb(38, 36, 41);
+    color: #000;
+    background-color: #fff;
 
 }
 
@@ -35,6 +42,10 @@ header {
     animation: slideRight 1s ease forwards;
 }
 
+header {
+    background-color: #e982ed;
+}
+
 .navbar a {
     display: inline-block;
     font-size: 25px;
@@ -46,10 +57,15 @@ header {
     opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 5px 5px;
+    border-radius: 20px;
+    font-family: "Bona Nova SC", serif;
 }
 
 .navbar a:hover {
-    color: #0ef;
+    /* color: rgb(5, 30, 255); */
+    box-shadow: 0 0 5px #cc26d1, 0 0 25px #cc26d1, 0 0 50px #cc26d1, 0 0 100px #cc26d1, 0 0 200px #cc26d1;
 
 }
 
@@ -58,7 +74,9 @@ header {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-
+    /* align-items: center; 
+    justify-content: center; */
+    text-align: center;
 }
 
 .home-content {
@@ -66,16 +84,17 @@ header {
     padding-left: 10%;
 }
 
-.home-sci {
-    padding-left: 10%;
-}
+
 
 .home-content h3 {
-    font-size: 22px;
+    font-size: 35px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
+    font-family: "Bona Nova SC", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .home-content h3:nth-of-type(2) {
@@ -85,24 +104,29 @@ header {
 }
 
 .home-content h3 span {
-    color: #0ef;
+    color: rgba(14, 36, 205, 0.806);
 
 }
 
 .home-content h1 {
-    font-size: 35px;
+    font-size: 60px;
+    font-family: "Bona Nova SC", serif;
+  
+  font-style: normal;
     font-weight: 700;
     margin: -3px 0;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: 1s;
 }
+
 .home-content p {
     font-size: 20px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
+
 .home-sci a {
     display: inline-flex;
     justify-content: center;
@@ -129,26 +153,9 @@ header {
 
 }
 
-.btn-box {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 10%;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
-}
 
-.btn-box:hover {
-    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
-}
+
+
 
 .photo {
     width: 250px;
@@ -163,6 +170,7 @@ header {
     animation: borderAnimation 2s infinite;
     flex: 0 0 250px;
     position: static;
+
 }
 
 .photo img {
@@ -170,28 +178,203 @@ header {
     height: 100%;
     object-fit: cover;
     animation: zoomInOut 3s infinite alternate;
+
 }
+
 .about-img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 3px solid #000;
+    border: 3px solid cyan;
     margin: 10% 10%;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: rotateAnimation 5s linear infinite;
+    /* align-items: center; */
+    /* justify-content: center; */
+    animation: rotateAnimation 7s linear infinite;
     flex: 0 0 250px;
     position: static;
+
 }
 
 .about-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: zoomIn 3s infinite alternate;
+    animation: zoomIn 10s infinite alternate;
 }
+
+
+.Technical-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.info {
+    flex: 1;
+}
+
+.progress-line {
+    flex: 2;
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 7px;
+    background-color: #c0d0d8a7;
+}
+
+.progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: left;
+    width: 0;
+    animation: grow 7s infinite forwards;
+}
+
+@keyframes grow {
+    to {
+        width: var(--progress-width);
+    }
+}
+
+.html span {
+    background-color: #E34C26;
+}
+
+.css span {
+    background-color: #264DE4;
+}
+
+.javascript span {
+    background-color: #F7DF1E;
+}
+
+.python span {
+    background-color: #c32ec9;
+}
+
+.c-plus-plus span {
+    background-color: #00599C;
+}
+
+.java span {
+    background-color: #007396;
+}
+
+.machine-learning span {
+    background-color: rgb(27, 137, 27);
+}
+
+.canva span {
+    background-color: rgb(106, 22, 208);
+}
+
+.figma span {
+    background-color: #cc490c;
+}
+
+.sub-title {
+    font-size: 55px;
+    color: #d20ad9dd;
+    font-family: "Bona Nova SC", serif;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.projects {
+
+    font-size: 55px;
+    color: rgba(225, 5, 245, 0.863);
+    font-family: "Bona Nova SC", serif;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    /* text-align: center;
+    padding: 50px; */
+}
+.portfolio{
+    text-align: center;
+    
+}
+.portfolio h2{
+    font-family: "Bona Nova SC", serif;
+}
+h1 {
+    color: #333;
+}
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.video-item {
+    flex: 1 1 calc(45% - 40px); 
+    background-color:#FDF5E6;
+    max-width: 45%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    /* font-family: "Bona Nova SC", serif; */
+}
+
+.video-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-10px); 
+}
+.video-item p{
+    /* font-family: "Bona Nova SC", serif; */
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+
+video:hover {
+    transform: scale(1.05); 
+}
+
+p {
+    margin-top: 10px;
+    color: #000;
+    
+}
+
+@keyframes showText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -203,14 +386,21 @@ header {
         opacity: 1;
     }
 }
-@keyframes rotateAnimation{
-    from {
-        transform: rotate(-15deg);
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
     }
-    to {
-        transform: rotate(15deg);
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-10deg);
     }
 }
+
 @keyframes zoomInOut {
     0% {
         transform: scale(1.2);
@@ -230,22 +420,22 @@ header {
 
     25% {
         border-color: rgba(0, 168, 252, 0.662);
-        box-shadow: 0 0 50px rgba(0, 168, 252, 0.662);
+        box-shadow: 0 0 100px rgba(0, 168, 252, 0.662);
     }
 
     50% {
         border-color: rgb(12, 136, 12);
-        box-shadow: 0 0 50px rgb(12, 136, 12);
+        box-shadow: 0 0 200px rgb(12, 136, 12);
     }
 
     75% {
         border-color: rgba(172, 172, 37, 0.913);
-        box-shadow: 0 0 50px rgba(172, 172, 37, 0.913);
+        box-shadow: 0 0 500px rgba(172, 172, 37, 0.913);
     }
 
     100% {
         border-color: rgb(204, 11, 150);
-        box-shadow: 0 0 50px rgb(204, 11, 150);
+        box-shadow: 0 0 1000px rgb(204, 11, 150);
     }
 
 }
@@ -262,6 +452,7 @@ header {
     }
 
 }
+
 @keyframes slideBottom {
     0% {
         transform: translateY(-100px);
@@ -274,6 +465,7 @@ header {
     }
 
 }
+
 @keyframes slideLeft {
     0% {
         transform: translateX(100px);
@@ -285,9 +477,225 @@ header {
         opacity: 1;
     }
 }
+
 .box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container1 {
+    margin-right: 10%;
+    width: 600px;
+    height: 500px;
+}
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; 
+}
+.contact-box {
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FDF5E6;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+    
+}
+.contact-box:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-10px); 
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-text {
+    flex: 1;
+    text-align: center;
+   
+}
+
+.contact-form {
+    flex: 1;
+}
+
+
+.contact-text h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    font-family: "Bona Nova SC", serif;
+}
+
+.contact-text h2 span {
+    color: #0ef;
+    font-family: "Bona Nova SC", serif;
+}
+
+.contact-text h4 {
+    margin: 15px 0;
+    color: #140e98;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Bona Nova SC", serif;
+}
+
+.contact-text p {
+    color: #000;
+    font-size: 20px;
+    /* line-height: 30px; */
+    margin-bottom: 2rem;
+    /* font-family: "Bona Nova SC", serif; */
+}
+
+.contact-list {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list i {
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.contact-list li a:hover {
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+}
+
+.contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.contact-icons i:hover {
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef; 
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 55px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 18px;
+    background: #eaeaf7;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #001b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+.contact-form form .send:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+.last-text p{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #d033d5;
+    color: white;
+    font-weight: 300;
+    margin-top: 70px;
+
+}
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+.top i{
+    color: #000;
+    background: #0ef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+.form1:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-5px); 
 }

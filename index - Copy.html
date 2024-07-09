@@ -1,59 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style - Copy.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    
 </head>
-<body>
-    
-    <header class="logo">
-        <a href="logo">Portfolio</a>
-    <nav class="navbar">
-        <a href="#" style="--i:1" class="active">Home</a>
-        <a href="#" style="--i:2">About</a>
-        <a href="#" style="--i:3">Skill</a>
-        <a href="#" style="--i:4">Portfolio</a>
-        <a href="#" style="--i:5">Contact</a>
-    </nav>    
-    </header>
-    
-    <section class="home">
-        <div class="box">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Ankita Devi</h1>
-            <h3>And I'm a <span class="text"></span></h3>
-            <p>I am a passionate frontend developer constantly enhancing my skills, with a keen interest in Machine Learning and Programming and many more....</p>
-        </div>  
-          
-        <div class="photo">
-            <img src="images/WhatsApp Image 2024-07-06 at 00.42.02_139de323.jpg" alt="">
-        </div> 
-        </div>  
-  
-        <div class="home-sci">
-            <a href="#" style="--i:6"><i class='bx bxl-facebook-circle' ></i></a>
-            <a href="#" style="--i:7"><i class='bx bxl-instagram' ></i></a>
-            <a href="#" style="--i:8"><i class='bx bxl-linkedin' ></i></a>
-            <a href="#" style="--i:9"><i class='bx bxl-github' ></i></a>
-        </div>
-        <a href="#" class="btn-box">More About Me</a>
-        <span class="home-imgHover"></span>
-</section>   
 
-<section class="about" id="about">
-   <div class="about-img">
-      <img src="images/IMG_20231225_205854[1].jpg" alt="">
-    </div>  
-    <div class="about-text">
-    <h2>About <span>Me</span></h2>
-    <h4>Frontend Development</h4>
+<body>
+
+    <header class="logo">
+        <a href="logo">Portfolio .</a>
+        <nav class="navbar">
+            <a href="#Home" style="--i:1" class="active">Home</a>
+            <a href="#Skills" style="--i:3">Skills</a>
+            <a href="#Portfolio" style="--i:4">Portfolio</a>
+            <a href="#Contact" style="--i:5">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="Home">
+        <div class="box">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Ankita Devi</h1>
+                <h3>And I'm a <span class="text"></span></h3>
+                <p>I am a passionate frontend developer constantly enhancing my skills, with a keen interest in Machine
+                    Learning and Programming and many more....</p>
+            </div>
+
+            <div class="photo">
+                <img src="WhatsApp Image 2024-07-06 at 00.42.02_139de323.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="#" style="--i:6"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#" style="--i:7"><i class='bx bxl-instagram'></i></a>
+            <a href="#" style="--i:8"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" style="--i:9"><i class='bx bxl-github'></i></a>
+        </div>
+        
+    
+        <span class="home-imgHover"></span>
+    </section>
+    <section class="container">
+    <div class="about-img">
+        <img src="IMG_20231225_205854[1].jpg" alt="">
+    </div>
+    <div class="container1" id="Skills">
+        <h1 class="sub-title"></h1>
+       
+        <div class="Technical.bars">
+            <div class="bar"><i style="color: #E34C26;" class='bx bxl-html5'></i>
+                <div class="info">
+                    <span>HTML</span>
+                </div>
+                <div class="progress-line html">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar"><i style="color: #264DE4;" class='bx bxl-css3'></i>
+                <div class="info">
+                    <span>CSS</span>
+                </div>
+                <div class="progress-line css">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar"><i style="color: #F7DF1E;" class='bx bxl-javascript'></i>
+                <div class="info">
+                    <span>Javascript</span>
+                </div>
+                <div class="progress-line javascript">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar"><i style="color: #c32ec9;" class='bx bxl-python'></i>
+                <div class="info">
+                    <span>Python</span>
+                </div>
+                <div class="progress-line python">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar"><i style="color: #00599C;" class='bx bxl-c-plus-plus'></i>
+                <div class="info">
+                    <span>C++</span>
+                </div>
+                <div class="progress-line c-plus-plus">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar"><i style="color: #007396;" class='bx bxl-java'></i>
+                <div class="info">
+                    <span>Java</span>
+                </div>
+                <div class="progress-line java">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar"><i style="color: rgb(27, 137, 27);" class='bx bxs-brain'></i>
+                <div class="info">
+                    <span>Machine Learning</span>
+                </div>
+                <div class="progress-line machine-learning">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar"><img src="favicon.svg" alt="Icon" width="15" height="15">
+                <div class="info">
+                    <span>Canva</span>
+                </div>
+                <div class="progress-line canva">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar"><i style="color: #cc490c;" class='bx bxl-figma'></i>
+                <div class="info">
+                    <span>Figma</span>
+                </div>
+                <div class="progress-line figma">
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-<script src="main.js"></script>    
+   <div class="portfolio" id="Portfolio">
+    <h1 class="projects"></h1>
+    <h2>My Recent Projects</h2>
+    <div class="video-container">
+        <div class="video-item">
+            <video controls>
+                <source src="Dashboard - Dashboard Meal Prep (Community) - Google Chrome 2024-07-07 11-38-40.mp4" type="">
+               
+            </video>
+            <p>I created an intuitive UI/UX design of a restaurant using Figma, featuring a vibrant color palette, and interactive elements to enhance the dining experience. The design emphasizes user-friendly menus, and visually appealing layouts to attract and retain customers.</p>
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="Download UltraEdit text editor for Windows - Google Chrome 2024-07-07 10-37-59.mp4" type="">
+                
+            </video>
+            <p>I created an UltraEdit clone using HTML and CSS, replicating the powerful text editor's interface and functionality. The design includes syntax highlighting, line numbering, and a responsive layout, providing a seamless and efficient coding experience for users.</p>
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="Netflix India – Watch TV Shows Online, Watch Movies Online - Google Chrome 2024-07-07 10-41-10.mp4" type="">
+                
+            </video>
+            <p>I designed a Netflix clone using HTML and CSS, mimicking its user interface with featured movies, categories, and a responsive layout. The clone includes a navigation bar, carousel for movie previews, and a sleek design to provide a familiar streaming experience similar to Netflix.</p>
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="My Portfolio - Google Chrome 2024-07-07 18-18-45.mp4" type="">
+            </video>
+            <p>I created a dynamic personal portfolio website using HTML, CSS, and JavaScript. It features my projects, skills, and contact information with interactive elements like animations and a responsive design. The site showcases my work and expertise in a visually appealing and functional manner.</p>
+        </div>
+    </div>
+   </div>
+    <section class="contact" id="Contact">
+    <div class="contact-box">
+       <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Let's Work Together !</h4>
+        <p>Let's work together to bring your creative visions to life! With expertise in responsive design, animation, and interactive user experiences, I can help transform your ideas into stunning web projects. Partner with me for innovative solutions and a collaborative journey toward digital excellence.</p>
+    </div>
+        <div class="contact-list">
+            <li><i class='bx bxs-send' ></i>ad2004ankita@gmail.com</li>
+            <li><i class='bx bxs-phone-call' ></i>9395429787</li>
+        </div>
+        <div class="contact-icons">
+            <a href=""><i class='bx bxl-facebook-circle' ></i></a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+            <a href=""><i class='bx bxl-instagram-alt'></i></a>
+            <a href=""><i class='bx bxl-linkedin'></i></a>
+        </div>
+       </div> 
+       <div class="contact-form">
+            <form action="">
+                <input type="text"  class="form1"                     placeholder="Enter Your Name" required>
+                <input type="text" class="form1" placeholder="Enter Your Email" required>
+                <input type="text" class="form1" placeholder="Enter your Subject">
+                <textarea name="" class="form1" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+            <input type="submit" value="submit" class="send">    
+            </form>
+       </div>
+    </section>
+    <div class="last-text">
+        <p>Developed with love by Ankita Devi &copy 2024 </p>
+    </div>
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+    <script src="main - Copy.js"></script>
 </body>
+
 </html>
